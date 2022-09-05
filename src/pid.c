@@ -1,4 +1,4 @@
-#include "../lib/pid.h"
+#include "../inc/pid.h"
 
 #include <stdio.h>
 

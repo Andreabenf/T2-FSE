@@ -1,4 +1,4 @@
-#include "../lib/display.h"
+#include "../inc/display.h"
 
 int fd;
 

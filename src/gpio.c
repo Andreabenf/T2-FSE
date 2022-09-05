@@ -1,4 +1,4 @@
-#include "../lib/gpio.h"
+#include "../inc/gpio.h"
 #include <softPwm.h>
 #include <wiringPi.h>
 

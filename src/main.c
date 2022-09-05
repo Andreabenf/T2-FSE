@@ -6,19 +6,19 @@
 #include <unistd.h>
 #include <wiringPi.h>
 
-#include "../lib/bme280.h"
-#include "../lib/display.h"
-#include "../lib/gpio.h"
-#include "../lib/pid.h"
-#include "../lib/thermometer.h"
-#include "../lib/uart.h"
+#include "../inc/bme280.h"
+#include "../inc/display.h"
+#include "../inc/gpio.h"
+#include "../inc/pid.h"
+#include "../inc/thermometer.h"
+#include "../inc/uart.h"
 
 #define true 1
-#define false 0
+#define false 0 
 
-struct bme280_dev bme_connection;
-int uart_filesystem, key_gpio = 1;
-int timer_trigger = 0;
+struct bme280_dev bme_connection; 
+int uart_filesystem, key_gpio = 1;  
+int timer_trigger = 0;      
 float ref_temp = 0;
 
 void timer_interrupt(int sig_num);
@@ -40,7 +40,7 @@ void pid_routine(int key)
 
   do
   {
-    // Read internal temp
+    // Read internal temp       
     write_uart_get(uart_filesystem, GET_INTERNAL_TEMP);
     TI = read_uart(uart_filesystem, GET_INTERNAL_TEMP).float_value;
 

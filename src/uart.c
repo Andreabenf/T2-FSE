@@ -5,9 +5,9 @@
 #include <termios.h>  
 #include <unistd.h>   
 
-#include "../lib/crc16.h"
-#include "../lib/gpio.h"
-#include "../lib/uart_defs.h"
+#include "../inc/crc16.h"
+#include "../inc/gpio.h"
+#include "../inc/uart_defs.h"
 
 int connect_uart() {
   int filestream = -1;
